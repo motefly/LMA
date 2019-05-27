@@ -1,0 +1,7 @@
+models/
+datas/
+*~
+__pycache__/
+*#*#
+*.tst
+summary/
