@@ -2,8 +2,6 @@
 
 Implementation for the paper "Light Multi-segment Activation for model compression", which has been submitted to NeurIPS'2019.
 
-**Note: We are sorry that there are two minor issues in the Supplementary File submitted, 1) In the legend of the last figure, that "LMA-S2" and "ReLU-S2" are reversed, 2) In the Table 6, that the given parameter numbers are wrong. The corrected ones are shown on the bottom of this page.**
-
 # Intorduction
 
 This repo is built for the experimental codes in our paper, containing all the model implementation, data acquisition, and parameter settings. Here we thanks the authors of the [codebase](https://github.com/antspy/quantized_distillation), and our repo is improved from it.
@@ -71,18 +69,4 @@ The following table shows the example results by running the scripts on CIFAR-10
 | APLU-8 | 89.67 | 90.12 | 89.75 | 89.94 | 90.13 | 89.92 | 0.21 |
 | LMA-8 | 90.59 | 90.27 | 90.84 | 90.62 | 90.53 | 90.57 | 0.20 |
 
-### Convergence curves on CIFAR-100
-
-Here we show the corrected figure that will replace the one in the Supplementary File.
-
-![Testing Accuracy-Epoch Curves on CIFAR-100](images/cifar100-acc-fix.png)
-
-The correct Table 6 in the Supplementary File should be,
-
-| Model | Widen Factor | Depth | Parameter Number |
-|--|--|--|--|
-| Teacher Model | 10 | 16 | 17.2 M |
-| Student Model 1 | 6 | 10 | 1.22 M |
-| Student Model 2 | 4 | 10 | 0.32 M |
-
-Sorry again and thanks for your visiting, if you have any questions, please new an issue.
+Thanks for your visiting, if you have any questions, please new an issue.
