@@ -1,6 +1,6 @@
 #  Light Multi-segment Activation for Model Compression
 
-Implementation for the paper "Light Multi-segment Activation for model compression", which has been submitted to NeurIPS'2019.
+Implementation for the paper "Light Multi-segment Activation for model compression", which has been submitted to AAAI'2020.
 
 # Intorduction
 
@@ -21,7 +21,7 @@ The models are based on Python and Pytorch, to run the codes, please set up the 
 1. Install Anaconda with Python >= 3.6. [Miniconda](https://conda.io/miniconda.html) is a quick way to get started.
 2. Clone the repository
     ```
-    git clone https://github.com/LMA-NeurIPS19/LMA
+    git clone https://github.com/LMA-AAAI/LMA
     ```
 3. Run the conda file script to create a conda environment:
     ```
@@ -33,7 +33,7 @@ The models are based on Python and Pytorch, to run the codes, please set up the 
 
 To train a teacher model, using the following script:
 ```bash
-python main.py -train_teacher -manager 0523
+python main.py -train_teacher -manager 0906
 ```
 It will produce a new trained teacher model saved in `models` and the model manager will be saved in `manager`. The arguments not specified are set to the default settings in the main file. And more default settings for translational models are [here](onmt/standard_options.py).
 
@@ -46,11 +46,11 @@ for sed in 1 2 3 4 5
 do
 for stmodel in 0 1 2
 do
-    python main.py -train_student -manager 0523-stModel $stmodel -stud_act relu -plot_title 0523 -seed $sed
-    python main.py -train_student -manager 0523 -stModel $stmodel -stud_act lma -plot_title 0523 -seed $sed
-    python main.py -train_student -manager 0523 -stModel $stmodel -stud_act swish -plot_title 0523 -seed $sed
-    python main.py -train_student -manager 0523 -stModel $stmodel -stud_act aplu -plot_title 0523 -seed $sed -num_bins 8
-    python main.py -train_student -manager 0523 -stModel $stmodel -stud_act prelu -plot_title 0523 -seed $sed -num_bins 8
+    python main.py -train_student -manager 0906 -stModel $stmodel -stud_act relu -plot_title 0523 -seed $sed
+    python main.py -train_student -manager 0906 -stModel $stmodel -stud_act lma -plot_title 0523 -seed $sed
+    python main.py -train_student -manager 0906 -stModel $stmodel -stud_act swish -plot_title 0523 -seed $sed
+    python main.py -train_student -manager 0906 -stModel $stmodel -stud_act aplu -plot_title 0523 -seed $sed -num_bins 8
+    python main.py -train_student -manager 0906 -stModel $stmodel -stud_act prelu -plot_title 0523 -seed $sed -num_bins 8
 done
 done
 
