@@ -1,6 +1,10 @@
 #  Light Multi-segment Activation for Model Compression
 
-Implementation for the paper "Light Multi-segment Activation for model compression", which has been submitted to AAAI'2020.
+Implementation for the paper "Light Multi-segment Activation for model compression", which has been accepted by AAAI'2020.
+
+If you find this code useful in your research, please cite the paper:
+
+Zhenhui Xu, Guolin Ke, Jia Zhang, Jiang Bian, and Tie-Yan Liu. "Light Multi-segment Activation for Model Compression." In Thirty-Fourth AAAI Conference on Artificial Intelligence, AAAI, 2020.
 
 # Intorduction
 
